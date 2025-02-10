@@ -37,7 +37,7 @@ def plot_speech_intervals(signal: np.ndarray, sample_rate: int, intervals: list)
     :param signal: аудіосигнал
     :param sample_rate: частота дискретизації
     :param intervals: часові межі активних інтервалів
-
+change text fix
     """
     plt.figure(figsize=(12, 6))
     time_axis = np.linspace(0, len(signal) / sample_rate, len(signal))
