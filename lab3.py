@@ -24,6 +24,7 @@ def detect_speech_intervals(signal: np.ndarray, sample_rate: int, top_db: float 
     :param sample_rate: частота дискретизації
     :param top_db: поріг для визначення тиші
     :return: список часових меж активних інтервалів (початок, кінець у секундах)
+
     """
     intervals = librosa.effects.split(signal, top_db=top_db)
     time_intervals = [(start / sample_rate, end / sample_rate) for start, end in intervals]
@@ -36,6 +37,7 @@ def plot_speech_intervals(signal: np.ndarray, sample_rate: int, intervals: list)
     :param signal: аудіосигнал
     :param sample_rate: частота дискретизації
     :param intervals: часові межі активних інтервалів
+
     """
     plt.figure(figsize=(12, 6))
     time_axis = np.linspace(0, len(signal) / sample_rate, len(signal))
