@@ -40,6 +40,7 @@ def fragment_signal(signal: np.ndarray, sample_rate: int, window_size: float = 0
 
 def fft_manual(x: np.ndarray):
     """
+    test
     Обчислює Швидке Перетворення Фур'є (FFT) для входу x.
     :param x: сигнал (масив комплексних або дійсних чисел)
     :return: результат FFT
